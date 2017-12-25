@@ -40,6 +40,13 @@ public class RpcResponse {
     }
 
     public Object getResult() {
+    	if(throwable!=null){
+    		try {
+				throw getThrowable();
+			} catch (Throwable e) {
+				e.printStackTrace();
+			}
+    	}
         return result;
     }
 

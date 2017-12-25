@@ -9,7 +9,8 @@ public class HelloServiceImpl implements HelloService {
 
     @Override
     public String hello(String name) {
-        return "Hello! " + name;
+    	throw new RuntimeException("12323");
+        //return "Hello! " + name;
     }
 
     @Override

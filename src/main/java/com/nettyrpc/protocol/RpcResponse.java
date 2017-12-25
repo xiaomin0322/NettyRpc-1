@@ -8,8 +8,18 @@ public class RpcResponse {
     private String requestId;
     private String error;
     private Object result;
+    private Throwable throwable;
+    
 
-    public boolean isError() {
+    public Throwable getThrowable() {
+		return throwable;
+	}
+
+	public void setThrowable(Throwable throwable) {
+		this.throwable = throwable;
+	}
+
+	public boolean isError() {
         return error != null;
     }
 
